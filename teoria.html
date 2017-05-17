@@ -13,7 +13,7 @@
 <body>
   <div class="navbar-fixed">
     <nav class="red darken-3" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+      <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">HDFS</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.html">Início</a></li>
           <li><a href="teoria.html">Por que?</a></li>
@@ -38,40 +38,136 @@
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <div class="row">
-        <br><br>
+      <div class="row">   
         <div id="Porque">
-        <h3 class="cyan-text text-darken-1">Por que usar o HDFS?</h3>
-          <p class="blue-grey-text text-darken-1" style="font-size: large;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.</p>
-        </div>
+        <h3 class="cyan-text text-darken-1" style="margin-left: 5%;">Um pouco de história</h3>
+        	<div class="col s12" style="margin-left: 5%; margin-right: 10%">
+            	<img class="materialboxed" src="images/historico.jpg">
+          	</div>
+        	<h3 class="cyan-text text-darken-1" style="margin-left: 5%; padding-top: 35%">Por que usar o HDFS?</h3>
+          	<p align="Justify" class="blue-grey-text text-darken-1 light" style="font-size: large; margin-left: 10%; margin-right: 10%">
+	          	<span style="font-weight:bold; font-size: x-large">Big Data:</span><br>
+				Com o advento da internet, o modo como se processa dados mudou e o modelo tradicional de banco de dados relacional não é projetado para lidar com esse novo paradigma, o Big Data. 
+				Big Data não esta, necessariamente, relacionado a grandes quantidades de dados, mas é definido por problemas que não são facilmente resolvidos usando as ferramentas tradicionais, sendo contituido a partir dos três Vs:<br> 
+				<span style="padding-left:5em">Volume se refere a quantidade de dados.</span><br>
+				<span style="padding-left:5em">Variedade a como os dados são organizados: estruturados, não-estruturados ou multi-estruturados (ambos os tipos).</span><br>
+				<span style="padding-left:5em">Velocidade não significa tempo real, porém o problema deve ser possível de se realizar em um tempo hábil.</span><br>
+				Se deseja saber mais: <a href="https://www.sas.com/pt_br/insights/big-data/what-is-big-data.html">https://www.sas.com/pt_br/insights/big-data/what-is-big-data.html</a>.<br><br>	
+				<span style="font-weight:bold; font-size: x-large">HDFS VS SGBD:</span><br>
+				O sistema de arquivos distribuido não pretende substituir o modelo tradicional, suas funcionalidades são restritas por não garantir consistência e pela dificuldade de trabalhar com operações em tempo real. 
+				É importante perceber que o HDFS não é uma base de dados.
+				Algumas das diferenças entre SGBD e o HDFS:</p>
+
+			
+            <table class="bordered centered highlight light blue-grey-text text-darken-1" style="font-size: large; margin-left: 10%; margin-right: 10%; width: 80%">
+            	<col style="width:20%">
+            	<thead>
+		          	<tr>
+			        	<th></th>
+			            <th>SGBD</th>
+			            <th>HDFS</th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		        	<tr>
+		            	<td style="font-weight:bold;">Transações</td> 
+		            	<td>ACID (atomic, consistency, isolation, durability)</td>
+		            	<td>Basically available, soft state, eventual consistency</td>
+		          	</tr>
+		          	<tr>
+		            	<td style="font-weight:bold;">Tipo de dados</td>
+		            	<td>Dados estruturados</td>	
+		            	<td>Dados não estruturados</td> 
+		          	</tr>
+		          	<tr>
+		            	<td style="font-weight:bold;">Atualizações</td>
+		            	<td>Atualizações de dados são frequentes (write e read many times)</td>	
+		            	<td>Atualizações de dados não são frequentes (write once, read many times)</td> 
+		          	</tr>
+		          	<tr>
+		            	<td style="font-weight:bold;">Duração</td>
+		            	<td>Operações em Tempo real</td>  	
+		            	<td>Não há necessidade de tempo real</td>  
+		          	</tr>
+		          	<tr>
+		            	<td style="font-weight:bold;">Scaling</td>
+		            	<td>Scale up (aumentar o poder de processamento comprando servidores mais caros)</td>
+		            	<td>Scale out (aumentar o poder de processamento aumentando a quantidade de servidores)</td> 
+		          	</tr>
+		          	<tr>
+		            	<td style="font-weight:bold;">Acesso</td>
+		            	<td>Iterativo e batch</td>
+		            	<td>Batch</td> 
+		          	</tr>
+		        </tbody>
+            </table>
+
+            <p align="Justify" class="blue-grey-text text-darken-1 light" style="font-size: large; margin-left: 10%; margin-right: 10%">
+	        	Analisando essa tabela é possível perceber o porque de sistemas de armazenamento distribuído se encaixam para lidar com Big Data. 
+				A última linha da tabela se refere ao tipo de acesso que os ambos realizam. Acessos do tipo bach são aqueles em que o processamento é feito por lotes de dados, afim de conseguir alguma espécie de relátorio, para uso posterior.
+
+				É usado por empresas que lidam com grandes volumes de dados, como a Amazon, Ebay, Twitter e o Facebook, as principais funções são para otimizar pesquisas e buscas e armazenar o log interno.<br> 
+				Nessa página é possível verificar quais são as outras empresas que usam, quantos nós usam e qual a sua finalidade<br>
+				<a href="https://wiki.apache.org/hadoop/PoweredBy" target="_blank">https://wiki.apache.org/hadoop/PoweredBy</a></p>
+          				
+	    </div>
 
         <p id="Oque">
 
         <div style="margin-top: 7%">
-        <h3 class="cyan-text text-darken-1">O que é o HDFS?</h3>
-          <p class="blue-grey-text text-darken-1" style="font-size: large;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.</p>
+        <h3 class="cyan-text text-darken-1" style="margin-left: 5%;">O que é o HDFS?</h3>
+          <p align="Justify" class="blue-grey-text text-darken-1 light" style="font-size: large; margin-left: 10%; margin-right: 10%">
+				O HDFS é a sigla para Hadoop Distributed File System, que é o componente de armazenamento distribuído. Os dados não ficarão apenas em um computador de alto padrão, como é com banco de dados tradicional, mas sim, distribuído ao longo de um cluster de computadores comuns, o que o torna econômico.<br>
+
+				Existem dois modos de processamento: o modo pseudo distribuído, quando em uma única máquina é possível simular os vários nós, e o modo totalmente distribuído quando todos os serviços estão em um cluster de computadores. Geralmente, se usa o modo pseudo distribuído para conhecer como funciona o Hadoop e para pequenos testes.<br><br> 
+
+				<span style="font-weight:bold; font-size: x-large">Os Blocos:</span><br>
+
+				Quando um cliente deseja armazenar o arquivo no sistema de arquivos, o arquivo é quebrado em blocos, sua unidade básica, com tamanho padrão de 128 MB, que pode ser configurado, deve-se levar em consideração que o tamanho do bloco não pode ser grande ao ponto do sistema ficar esperando o processamento de uma única unidade, porém, não pode ser pequeno ao ponto de não valer a pena os recursos gastos no processamento de apenas uma unidade. Comparando com o armazenamento em disco, onde o tamanho do bloco padrão é 512 bytes, o tamanho de bloco proposto pelo HDFS é pelo menos 250 mil vezes maior, isso porque o HDFS quer diminuir o custo de seeks, assim a taxa de transferência é ordens de magnitude maior que o seek.<br>
+
+				A quebra de arquivos em blocos ocorre, primeiro, porque permite que os arquivos sejam maiores do que qualquer disco do cluster, e segundo, por simplificar o sistema de armazenamento, pois, ao lidar com blocos, os nós que armazenam esses blocos não precisam lidar com metadados de arquivos e ao mesmo tempo simplifica o armazenamento, uma vez que os blocos tem tamanho fixo. <br><br>  
+
+				<span style="font-weight:bold; font-size: x-large">O NameNode:</span><br>
+
+				Tem uma arquitetura mestre-escravo, onde um único mestre controla a operação dos demais. Esse nó é chamado de NameNode, que atua como uma agenda de endereços, através dos arquivos fsimage e edit log, determina onde os blocos e suas réplicas devem ser armazenados e registra a que arquivo pertence cada bloco. O arquivo fsimage armazena quais blocos pertencem a cada arquivo e o edit log armazena as operações de escrita no sistema.<br>
+
+				O NameNode tem armazenado localmente o filesystem namespace (onde ficam armazenadas informações dos arquivos), quando o cliente executa uma operação de escrita, primeiro é registrado no arquivo de edit log, depois o filesystem namespace é modificado. Quando o sistema é inicializado, o NameNode traz toda informação do fsimage para a sua memória, assim, registra o estado atual do sistema, depois carrega as modificações através do arquivo edit log para atualizar o sistema.<br>
+
+				Os dados nunca passam diretamente pelo NameNode, assim consegue simplificar o sistema, pois não cria gargalo, porém essa política cria um único ponto que se falhar, quebra o sistema inteiro. 
+				Para manter o sistema tolerante a falhas, existem várias formas de evitar a perda das informações de todos os blocos, uma delas é acrescentar um segundo NameNode, que está em outra máquina do cluster. Sua função é mesclar, periodicamente, os arquivos de fsimage e edit log e manter a cópia desse arquivo mesclado, assim, em caso de falha, uma parte dos registros estão seguros.<br>
+
+				O espaço de memória do NameNode pode ser um limitador para a capacidade de armazenamento do sistema, pois ele mantêm os metadados de todos os arquivos armazenados no sistema. 
+				HDFS federation permite que sejam admicionados NameNodes no sistema, cada um coordena uma porção do filesystem namespace.<br><br>
+
+				<span style="font-weight:bold; font-size: x-large">Os DataNodes:</span><br>
+
+				Já os escravos são chamados de DataNodes, estão espalhados pelo cluster, um por nó. São os responsáveis por atender as requisições dos clientes, e armazenar os blocos. O blocos são  armazenados em forma de arquivos individuais no diretório local. Usa uma heurística para determinar o número ótimo de arquivos por diretório e para criar subdiretórios apropriadamente.<br>
+
+				Geralmente, os blocos são lidos através do disco, porém blocos frequentemente acessados podem estar em cache dento do DataNode. Desse modo, gerenciadores de escalonamento podem rodar tarefas nos nós onde o bloco está em cache, melhorando a performace.       
+				Como são considerados pontos de falhas, periodicamente enviam relatórios de funcionamento para o NameNode. Um heartbeat indica que o DataNode está em funcionamento, um block report indica quais são os blocos armazenados nesse DataNode. Esses dados permitem que o NameNode saiba de antemão quais DataNodes estão disponíveis para armazenamento e para leitura, assim, não direciona o cliente para DadaNodes que não estão em funcionamento.<br><br>
+
+				<span style="font-weight:bold; font-size: x-large">Replicação de dados:</span><br>
+
+				Uma aplicação pode especificar o número de replicas, esse número é chamado de replication factor, porém é o NameNode o responsável por tomar todas as decisões sobre replicação de dados. Por padrão, o número de replicas é 3, e os blocos são separados de forma que o primeiro esteja em um rack diferente dos demais, o segundo no mesmo rack do terceiro porém em nós separados.<br>
+				Desse modo o sistema consegue lidar com dois tipos de falhas, as falhas dos DataNodes e também as falhas de rack. Além disso, essa política melhora as operações de escrita, pois reduz a largura de banda, considerando que entre racks diferentes ela é menor que dentro do mesmo rack, uma vez que os dados estão em dois racks diferentes, não em três, que seria a política mais simples.<br> 
+
+				Sempre que possível os dados são manipulados localmente, pois mover computação é mais barato que mover dados. Isso diminui o congestionamento de rede e aumenta a taxa de transferência do sistema. O HDFS tenta satisfazer as requisições com uma réplica mais próxima ao cliente. As operações de Map são realizadas no mesmo nó que está o bloco, já para operação de Reduce, o dado é movido para outro nó.<br><br>
+
+				<span style="font-weight:bold; font-size: x-large">Leitura e Escrita:</span><br>
+
+				Para ler um arquivo, o cliente manda uma notificação para o NameNode por um arquivo. O NameNode determina quais blocos pertencem a esse arquivo e escolhe os blocos baseado na proximidade do bloco ao cliente e da proximidade entre blocos. O cliente acessa os blocos de acordo com os endereços fornecidos pelo NameNode, desse modo nenhum dado passa pelo NameNode, isso permite o sistema lidar com vários clientes pois o tráfego de dados está ao longo do sistema. Se o cliente encontra um erro durante a comunicação, o sistema ira tentar o bloco semelhante mais próximo daquele bloco e notifica que aquele DataNode está com defeito, para evitar que o NameNode direcione outros clientes para esse DataNode.<br>   
+
+				Para escrever um arquivo, o cliente informa ao NameNode que deseja fazer uma escrita, com nenhum bloco associado a ele. O NameNode verifica se o arquivo já existe e se o cliente tem permissão para executar essa operação. Quando o cliente escreve os dados, eles são divididos em pacotes que são distribuídos através de um pipeline formado pelos DataNodes que o NameNode disponibilizou, de acordo com o fator de replicação. Os pacotes são direcionados para o primeiro DataNode do pipeline, que armazena cada pacote e os direciona para o segundo DataNode que repete a ação, até chegar no último DataNode.<br> 
+
+				O cliente mantém uma fila interna de pacotes que ainda não foram enviados (ainda nao receberam ack de que foram salvos no DataNode), assim se um DataNode falhar enquanto um pacote é escrito, o pipeline é fechado e o DataNode é removido e um novo pipeline é montado com os DataNodes disponíveis. O NameNode detecta que o bloco não tem réplicas o suficiente e direciona a cópia para outro DataNode. Os outros pacotes da fila são tratados normalmente. O NameNode só sabe se a operação de escrita foi um sucesso depois de todos os pacotes forem removidos do pipeline e estão com a quantidade minima de réplicas.<br>
+
+				Dividir os dados a serem armazenados em pacotes, permite que os últimos blocos não sejam do tamanho do bloco definido pelo HDFS.<br><br>
+
+				<span style="font-weight:bold; font-size: x-large">Integridade dos dados:</span><br>
+				 
+				O HDFS usa um detector de erro conhecido como CRC-32C para verificar todo dado escrito e lido do sistema. Na escrita o último DataNode do pipeline é responsável por fazer essa verificação, se ele detectar um erro, o cliente é notificado e deve lidar com esse erro, repetindo a operação, por exemplo. Quando o cliente lê um dado do DataNode, ele também verifica, comparando com o que está armazenado no DataNode.
+        </p>
         </div>
 
 
